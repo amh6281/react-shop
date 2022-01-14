@@ -1,10 +1,12 @@
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+
 function App() {
   return (
     <div className="App">
       <Header />
-      <h1>본문</h1>
+      <Home />
     </div>
   );
 }
