@@ -23,7 +23,9 @@ function Header() {
       <div className="header_nav">
         <div className="header_option">
           <span className="header_optionOne">안녕하세요</span>
-          <span className="header_optionTwo">로그인하기</span>
+          <Link to="/login" className="homeLogin">
+            <span className="header_optionTwo">로그인하기</span>
+          </Link>
         </div>
         <div className="header_option">
           <span className="header_optionOne">돌아가기</span>
