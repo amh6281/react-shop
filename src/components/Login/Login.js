@@ -1,7 +1,17 @@
-import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { auth } from "../../firebase";
+import {
+  TextField,
+  Checkbox,
+  Button,
+  FormControlLabel,
+  Typography,
+  Avatar,
+  Box,
+  Container,
+} from "@mui/material";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -31,7 +41,7 @@ export default function Login() {
   };
 
   return (
-    <div className="login">
+    <div>
       <Link to="/">
         <img
           className="login_logo"
@@ -39,31 +49,56 @@ export default function Login() {
           alt=""
         />
       </Link>
-      <div className="login_container">
-        <h1>로그인</h1>
-        <form>
-          <h5>이메일</h5>
-          <input
+      <Container component="main" maxWidth="xs">
+        <Box
+          sx={{
+            marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+          <TextField
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            type="text"
+            margin="normal"
+            label="Email Address"
+            required
+            fullWidth
+            name="email"
+            autoComplete="email"
+            autoFocus
           />
-          <h5>비밀번호</h5>
-          <input
+          <TextField
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            margin="normal"
+            label="Password"
             type="password"
+            required
+            fullWidth
+            name="password"
+            autoComplete="current-password"
+          />
+          <FormControlLabel
+            control={<Checkbox value="remember" color="primary" />}
+            label="이용 약관에 동의"
           />
 
-          <button onClick={signIn} className="login_btn">
-            로그인 하기
-          </button>
-        </form>
-        <p>이용 약관에 동의</p>
-        <button onClick={signUp} className="login_registerBtn">
-          회원가입
-        </button>
-      </div>
+          <Button fullWidth variant="contained" onClick={signIn} sx={{ mt: 3 }}>
+            Sign in
+          </Button>
+          <Button fullWidth variant="contained" onClick={signUp} sx={{ mt: 3 }}>
+            Sign Up
+          </Button>
+        </Box>
+      </Container>
     </div>
   );
 }
