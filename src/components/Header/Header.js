@@ -1,10 +1,11 @@
 import React from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
-import { ShoppingBasket } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
+import IconButton from "@mui/material/IconButton";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -40,13 +41,11 @@ function Header() {
           <span className="header_optionOne">돌아가기</span>
           <span className="header_optionTwo">주문내역</span>
         </div>
-        <div className="header_option">
-          <span className="header_optionOne">반가워요</span>
-          <span className="header_optionTwo">안녕하세요</span>
-        </div>
         <Link to="/checkout">
           <div className="header_basket">
-            <ShoppingBasket />
+            <IconButton color="primary" aria-label="add to shopping cart">
+              <AddShoppingCartIcon />
+            </IconButton>
             <span className="header_basketCnt">{basket.length}</span>
           </div>
         </Link>
