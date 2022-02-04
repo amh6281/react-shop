@@ -1,5 +1,5 @@
 <div align="center">
-  <h1🛍무드등 쇼핑몰🛍</h1>
+  <h1>🛍무드등 쇼핑몰🛍</h1>
  <h4>React 기반의 무드등 쇼핑몰입니다.</h4>
   </div>
 <div align="center">
