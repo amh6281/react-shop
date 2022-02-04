@@ -10,10 +10,17 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  border-radius: 10px;
+  opacity: 0.8;
 }
 
 .product_rating {
   display: flex;
+}
+
+.product_font {
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .product > img {
