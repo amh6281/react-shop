@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1>🛍무드등 쇼핑몰🛍</h1>
+ <h4>React 기반의 무드등 쇼핑몰입니다.</h4>
+  </div>
+<div align="center">
+</div>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💪 Skills
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white"/>
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+## 📝 About The Project
+> <b>이 프로젝트는 React와 Firebase 기반 프로젝트를 구현하기 위해 기획되었으며, 주요 기능은 Firebase를 통한 로그인 기능, reducer를 통한 장바구니 기능입니다.</b>
 
-### `npm start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 👨‍💻 React
+- <b>useState()</b>
+  - 값이 변하는지 변하지 않는지 상태를 관리한다.
+- <b>useEffect()()</b>
+  - 렌더링 직후 작업을 설정하는 기능을 제공한다.
+- <b>useNavigate()</b>
+  - 페이지 방문 기록을 관리한다.
+- <b>StateProvider</b>
+  - Context Api hook을 통해 컴포넌트를 건너띄고 다른 컴포넌트에서 state, function을 관리하고, <br> useReducer hook을 통해 컴포넌트의 상태 업데이트 로직을 컴포넌트에서 분리시킨다.
+- <b>React-Router</b>
+  - 라우터 돔을 이용하여, 페이지의 로딩 없이, 페이지에 필요한 컴포넌트를 불러와 렌더링 하여 보여준다. 
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✔︎ What to do?
 
-### `npm test`
+- <b>useState를 통해 컴포넌트의 상태(동적인 값)를 관리한다.</b>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- <b>Props를 통해 상위 컴포넌트에서 하위 컴포넌트에게 값을 전달한다.</b>
 
-### `npm run build`
+- <b>로그인 상태 유지를 위해 useEffect를 사용한다.</b>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- <b>react-currency-format을 통해 장바구니의 총합을 가져온다.</b>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- <b>영화 API에서 필요한 데이터를 fetch하고, 받아온 데이터를 async/await을 사용하여 연결한다.</b>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- <b>react-stipe-js를 통해 결제 api를 가져온다.</b>
 
-### `npm run eject`
+- <b>Firebase를 연결하여 로그인 기능을 구현한다.</b>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- <b>Context Api hook을 통해 장바구니의 상태를 관리한다.</b>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- <b>useEffact를 통해 로그인 상태를 유지한다.</b>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- <b>장바구니 삭제 기능은 findIndex 메소드를 통해 basket의 아이디와, 제거했을 때의 아이디가 동일했던 위치를 인덱스에 넣어주고 <br> 새로운 바스켓(newBasket)을 정의해준다.</b>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- <b>Material UI를 통해 아이콘을 구현한다.
