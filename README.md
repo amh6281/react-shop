@@ -3,6 +3,7 @@
  <h4>React 기반의 무드등 쇼핑몰입니다.</h4>
   </div>
 <div align="center">
+  <img src="https://user-images.githubusercontent.com/83646986/154010249-17117883-f2c2-4666-9227-e16a6f427d45.gif" />
 </div>
 <br>
 
